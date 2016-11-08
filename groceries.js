@@ -1,3 +1,21 @@
+function addItem(){
+  //Get the value of what the user typed in the text box and assign it to a variable called input
+  var input = document.getElementById("newItem").value;
+  console.log(input)
+  //Get the element listDisplay and assign it to a variable called list
+  var list = document.getElementById("listDisplay");
+  //Create a new variable called item and assign it to: document.createElement("li"); This creates a new list item element for the document object model (DOM).
+  var item = document.createElement("li");
+    list.appendChild(item);
+  //Create a new variable called itemName and assign it to: document.createTextNode(input); This creates plain text element from the value of the variable input to put in the DOM.
+  var itemName = document.createTextNode(input);
+    item.appendChild(itemName);
+    input = document.getElementById("newItem").value="";
+
+
+
+}
+
 
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
 function setCookie(cname, cvalue, exdays) {

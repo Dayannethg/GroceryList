@@ -6,7 +6,18 @@ function addItem(){
   var list = document.getElementById("listDisplay");
   //Create a new variable called item and assign it to: document.createElement("li"); This creates a new list item element for the document object model (DOM).
   var item = document.createElement("li");
-    list.appendChild(item);
+  var btnClose = document.createElement("button");
+     btnClose.classList.add("btn");
+     btnClose.classList.add("btn-danger");
+     btnClose.classList.add("btn-xs");
+  var iconClose = document.createElement("span");
+     iconClose.classList.add("glyphicon");
+     iconClose.classList.add("glyphicon-remove");
+     btnClose.appendChild(iconClose);
+     item.appendChild(btnClose);
+     //Now, make btnClose a child of the li element you already made in addItem()
+     //^give li a baby & li corresponds to the var item
+     list.appendChild(item);
   //Create a new variable called itemName and assign it to: document.createTextNode(input); This creates plain text element from the value of the variable input to put in the DOM.
   var itemName = document.createTextNode(input);
     item.appendChild(itemName);

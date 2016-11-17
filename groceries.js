@@ -1,7 +1,12 @@
+var myList = [];
 function addItem(){
   //Get the value of what the user typed in the text box and assign it to a variable called input
   var input = document.getElementById("newItem").value;
-  console.log(input)
+  if (myList.indexOf(input) == -1)
+  {
+  console.log(input);
+  myList.push(input);
+  console.log(myList);
   //Get the element listDisplay and assign it to a variable called list
   var list = document.getElementById("listDisplay");
   //Create a new variable called item and assign it to: document.createElement("li"); This creates a new list item element for the document object model (DOM).
@@ -23,6 +28,11 @@ function addItem(){
   var itemName = document.createTextNode(input);
     item.appendChild(itemName);
     input = document.getElementById("newItem").value="";
+  }
+  else
+  {
+    
+  }
 }
 function removeParentListItem()
 {
